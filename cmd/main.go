@@ -73,7 +73,7 @@ func (c *Colony) printMigation() {
 func (c *Colony) initMove(ants map[string][]string, n *int) {
 	for i := 0; i < len(c.tunnel); i++ {
 		if c.tunnel[i].ants > 0 {
-			ants[fmt.Sprintf("L%d", n)] = c.tunnel[i].path[1:]
+			ants[fmt.Sprintf("L%d", *n)] = c.tunnel[i].path[1:]
 			*n++
 			c.tunnel[i].ants--
 		}
